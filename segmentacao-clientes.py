@@ -77,7 +77,7 @@ def classificador(recencia, frequencia, valor_total):
     elif recencia <= 40 and frequencia <= 2:
         return "Em Risco"
     else:
-        return "Perdido(a)"
+        return "Perdida(o)"
 
 # monta o DataFrame RFM com os 3 indicadores
 # os três têm cliente_id como índice — o pandas alinha automaticamente
