@@ -1,0 +1,11 @@
+cliente_id,nome,cidade,estado,genero,data_cadastro
+C01,Ana Lima,São Paulo,SP,F,2023-06-10
+C02,Beatriz Souza,Campinas,SP,feminino,2023-08-22
+C03,Carla Mendes,Rio de Janeiro,RJ,F,2023-05-15
+C04,Débora Ramos,Belo Horizonte,MG,,2023-09-01
+C05,Eliana Costa,Curitiba,PR,F,2023-07-19
+C06,Fernanda Nunes,Porto Alegre,RS,F,2023-10-05
+C07,Giovana Pereira,Recife,PE,F,2023-11-12
+C08,Helena Martins,Salvador,BA,F,2021-03-30
+C09,Isabela Teixeira,Fortaleza,CE,F,2024-04-01
+C02,Beatriz Souza,Campinas,SP,feminino,2023-08-22
