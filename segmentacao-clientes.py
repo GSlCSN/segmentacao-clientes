@@ -108,3 +108,46 @@ dados_filtrados = dados_filtrados[cols]
 dados_filtrados.to_csv("relatorio_crm.csv", index=False)
 
 print("Sucesso na exportação")
+
+tabela = pd.pivot_table(
+    dados_filtrados,
+    values="cliente_id",
+    index="frequencia",
+    columns="recencia_dias",
+    aggfunc="count",
+    fill_value=0
+)
+
+print(tabela)
+# ======= Parte de Matplot =======
+import matplotlib.pyplot as plt
+
+print(dados_filtrados["segmento_rfm"].value_counts())
+
+plt.figure(figsize=(8, 5))
+
+contagem_segmentos = dados_filtrados["segmento_rfm"].value_counts()
+
+plt.bar(contagem_segmentos.index, contagem_segmentos.values, color=("red","blue","pink","black"))
+
+plt.title("Quantidade de Clientes por Segmento RFM")
+
+plt.ylabel("Quantidade de Clientes")
+plt.xlabel("Segmento")
+
+plt.savefig("figura_dados.png")
+
+plt.show()
+
+# ======= Parte de Seaborn =======
+import seaborn as sns
+
+plt.figure(figsize=(10, 5))
+
+sns.heatmap(tabela, annot=True, cmap="YlOrRd")
+
+plt.title("Quantidade de Clientes por Segmento RFM")
+
+plt.savefig("figura_dados2.png")
+
+plt.show()
